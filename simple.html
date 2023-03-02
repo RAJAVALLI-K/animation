@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background:linear-gradient(to left,#ab22c0,#ba1266,#0ae7d8);
+        }
+        .container{
+            height: 200px;
+            width: 350px;
+            position: relative;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            transform: rotateX(-10deg) rotateZ(-10deg);
+            animation: rotate 20s linear infinite;
+            margin: 200px auto;
+            
+        }
+        @keyframes rotate{
+            30%{
+                transform: rotatex(20deg);
+            }
+            80%{
+                transform: rotatex(-20deg);
+            }
+        }
+        .images{
+            width: 100%;
+            transform-style: preserve-3d;
+            position: absolute;
+            animation: circle 20s linear infinite;
+        }
+        @keyframes circle{
+            from{
+                 transform: rotateY(0deg);
+            }
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+        img{
+            height: 180px;
+            width: 300px;    
+            position: absolute;  
+        }
+        img:nth-child(1){
+            transform: rotateY(60deg) translateZ(300px);
+        }
+        img:nth-child(2){
+            transform: rotateY(120deg) translateZ(300px);
+        }
+        img:nth-child(3){
+            transform: rotateY(180deg) translateZ(300px);
+        }
+        img:nth-child(4){
+            transform: rotateY(240deg) translateZ(300px);
+        }
+        img:nth-child(5){
+            transform: rotateY(300deg) translateZ(300px);
+        }
+        img:nth-child(6){
+            transform: rotateY(360deg) translateZ(300px);
+        }
+        img:hover{
+            height: 200px;
+            width: 320px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="images">
+            <img src="images/teddy.png" alt="teddy">
+            <img src="images/red.png" alt="red-rose">
+            <img src="images/picture5.jpg" alt="spider">
+            <img src="images/picture4.jpg" alt="teddy-gift">
+            <img src="images/whiterose.jpg" alt="white-rose">
+            <img src="images/picture3.jpg" alt="gifts">
+        </div>
+    </div>
+</body>
+</html>
